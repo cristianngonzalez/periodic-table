@@ -1,0 +1,11 @@
+.table{
+    width: 1008px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+/*The first table is the big table*/
+.table:first-of-type{
+    height: 394px;
+    margin-bottom: 20px;
+}

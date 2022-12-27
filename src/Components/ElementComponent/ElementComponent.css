@@ -1,0 +1,26 @@
+.element{
+    width: 50px;
+    height: 50px;
+    margin: 3px;
+    float: left;
+    position: relative;
+}
+
+    .element .symbol{
+        font-size: 25px;
+        line-height: 1.4;
+    }
+
+    .atomic-number{
+        background: rgba(0, 0, 0, 0.318);
+        position: absolute;
+        width: 50px;
+        padding: 0px;
+        height: 18px;
+        bottom: 0px;
+    }
+        .atomic-number span{
+            color: white;
+            font-size: 12px;
+            line-height: 1;
+        }
