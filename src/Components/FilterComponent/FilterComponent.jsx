@@ -7,10 +7,10 @@ class FilterComponent extends React.Component{
 
     render(){
         return(
-            <div>
-                <button>All</button>
-                <button>Metals</button>
-                <button>No metals</button>
+            <div className="filterContainer">
+                <div>
+                    Filters
+                </div>
             </div>
         )
     }
