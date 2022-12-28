@@ -4,4 +4,10 @@ export function select(element){
        type: 'ELEMENT' , payload: {element: element}
    }
 }
- 
+
+export function titlefilter(title){
+    
+    return{
+        type: 'FILTER-TITLE' , payload: {title: title}
+    }
+}

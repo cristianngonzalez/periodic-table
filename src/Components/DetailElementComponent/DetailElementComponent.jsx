@@ -39,7 +39,7 @@ function mapDispatchToProps(dispatch) {
     };
   }
   
-  export default connect(
+export default connect(
     mapStateToProps,
     mapDispatchToProps
-  )(DetailElementComponent);
+)(DetailElementComponent);
