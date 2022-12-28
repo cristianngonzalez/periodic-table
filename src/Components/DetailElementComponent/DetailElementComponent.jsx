@@ -31,13 +31,13 @@ function mapStateToProps(state) {
     return {
         current_element: state.current_element
     };
-  }
+}
 
 
 function mapDispatchToProps(dispatch) {
     return {
     };
-  }
+}
   
 export default connect(
     mapStateToProps,
