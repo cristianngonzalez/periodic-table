@@ -3,7 +3,7 @@ import { element } from "../actions/index";
 
 //InitialState contiene las mismas propiedades que el store
 const initialState = {
-  count: 0
+  current_element: false
 };
 
 function rootReducer(state = initialState, action) {
