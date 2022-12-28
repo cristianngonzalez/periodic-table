@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import data from './data.json';
-
+//Components
 import FilterComponent from './Components/FilterComponent/FilterComponent';
 import TableComponent from './Components/TableComponent/TableComponent';
 

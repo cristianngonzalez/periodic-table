@@ -1,7 +1,10 @@
 import React from "react";
 import './ElementComponent.css';
+import { connect } from 'react-redux';
 
 import data from '../../data.json';
+
+import { select  } from '../../actions/index';
 
 class ElementComponent extends React.Component{
 
@@ -17,9 +20,14 @@ class ElementComponent extends React.Component{
 
     }
 
+    select(element){
+        //HookEvent (Send if to show in the info div)
+        this.props.select(element);
+    }
+
     render(){
         return(
-            <div className="element" style={{background: this.state.type.style_background}}>
+            <div onClick={() => this.select(this.state.element)} className="element" style={{background: this.state.type.style_background}}>
                 <span className="symbol">{this.state.element.symbol}</span>
                 <div className="atomic-number">
                     <span>{this.state.element.atomic_number}</span>
@@ -30,4 +38,22 @@ class ElementComponent extends React.Component{
 
 }
 
-export default ElementComponent;
+
+
+function mapStateToProps(state) {
+    return {
+
+    };
+  }
+
+
+function mapDispatchToProps(dispatch) {
+    return {
+        select: (element) => dispatch(select(element))
+    };
+  }
+  
+  export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(ElementComponent);

@@ -13,11 +13,11 @@ class DetailElementComponent extends React.Component{
         return(
             <div className="detailTable">
                 <div className="detailTitleContainer">
-                    
+
                 </div>
 
                 <div className="detailInfoContainer">
-
+                    
                 </div>
             </div>
         )
