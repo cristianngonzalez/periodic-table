@@ -25,9 +25,89 @@ class ElementComponent extends React.Component{
         this.props.select(element);
     }
 
+    defineStyle(){
+        let elementActive = {background: this.state.type.style_background};
+        let elementInactive = {background: 'white', color: 'white'};
+        
+        switch(this.props.filter.title){
+            case 'all':{ return elementActive};break;
+            case 'metals':{ 
+                //If is indicated type of metal just show the metals indicate
+                if(this.props.filter.type){
+                    if(this.props.filter.type === this.state.element.type_id){
+                        return elementActive;
+                    }else{
+                        return elementInactive;
+                    }
+                }else{
+                    //If isn't indicated type of metal show alls metals
+                    if(this.state.type.metal){
+                        return elementActive;
+                    }else{
+                        return elementInactive;
+                    }
+                }
+             };break;
+            case 'no-metals': {
+                //If is indicated type of metal just show the metals indicate
+                if(this.props.filter.type){
+                    if(this.props.filter.type === this.state.element.type_id){
+                        return elementActive;
+                    }else{
+                        return elementInactive;
+                    }
+                }else{
+                    //If isn't indicated type of metal show alls metals
+                    if(!this.state.type.metal){
+                        return elementActive;
+                    }else{
+                        return elementInactive;
+                    }
+                }
+            };break;
+            case 'states': {
+                //If is indicated type of metal just show the metals indicate
+                if(this.props.filter.state){
+                    if(this.props.filter.state === this.state.element.state_id){
+                        return elementActive;
+                    }else{
+                        return elementInactive;
+                    }
+                }else{
+                    return elementActive;
+                }
+            };break;
+            case 'groups': {
+                //If is indicated type of metal just show the metals indicate
+                if(this.props.filter.group){
+                    if(this.props.filter.group === this.state.element.group){
+                        return elementActive;
+                    }else{
+                        return elementInactive;
+                    }
+                }else{
+                    return elementActive;
+                }
+            };break;
+            case 'periods': {
+                //If is indicated type of metal just show the metals indicate
+                if(this.props.filter.period){
+                    if(this.props.filter.period === this.state.element.period){
+                        return elementActive;
+                    }else{
+                        return elementInactive;
+                    }
+                }else{
+                    return elementActive;
+                }
+            };break;
+            default: {return{background: 'white'}}
+        }
+    }
+
     render(){
         return(
-            <div onClick={() => this.select(this.state.element)} className="element" style={{background: this.state.type.style_background}}>
+            <div onClick={() => this.select(this.state.element)} className="element" style={this.defineStyle()}>
                 <span className="symbol">{this.state.element.symbol}</span>
                 <div className="atomic-number">
                     <span>{this.state.element.atomic_number}</span>
@@ -42,7 +122,7 @@ class ElementComponent extends React.Component{
 
 function mapStateToProps(state) {
     return {
-
+        filter: state.filter
     };
   }
 

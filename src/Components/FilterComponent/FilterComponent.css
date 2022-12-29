@@ -1,10 +1,14 @@
-.filterContainer{
+.filter-card{
     width: 1000px;
-    height: 100px;
-    background: rgb(216, 216, 216);
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 6px;
     text-align: left;
 }
 
+.filter-card .btn{
+    margin: 4px;
+    padding: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+}

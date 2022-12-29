@@ -130,17 +130,17 @@
         ],
 
         "types": [
-            {"id": 1 , "name": "Alkaline metals" , "metal": true , "style_background": "#0ABCDE"},
-            {"id": 2 , "name": "Alkaline earth metals" , "metal": true , "style_background": "#ebbfd8"},
-            {"id": 3 , "name": "Transition metals" , "metal": true , "style_background": "#ebbfd8"},
+            {"id": 1 , "name": "Alkaline metals" , "metal": true , "style_background": "#e83283"},
+            {"id": 2 , "name": "Alkaline earth metals" , "metal": true , "style_background": "#ffc107"},
+            {"id": 3 , "name": "Transition metals" , "metal": true , "style_background": "#41d7a7"},
             {"id": 4 , "name": "Post-Transitional metals" , "metal": true , "style_background": "#ED7700"},
             {"id": 5 , "name": "Metalloids" , "metal": true , "style_background": "#d1a2cb"},
-            {"id": 6 , "name": "Lanthanides" , "metal": true , "style_background": "#cfecef"},
+            {"id": 6 , "name": "Lanthanides" , "metal": true , "style_background": "#686dc3"},
             {"id": 7 , "name": "Actinides" , "metal": true , "style_background": "#b3d93e"},
 
             {"id": 8 , "name": "No metals" , "metal": false , "style_background": "#a3c7d2"},
             {"id": 9 , "name": "Halogens" , "metal": false , "style_background": "#e4bd85"},
-            {"id": 10 , "name": "Noble gases" , "metal": false , "style_background": "#e8e000"}
+            {"id": 10 , "name": "Noble gases" , "metal": false , "style_background": "#3a8fd9"}
         ],
 
         "states": [
