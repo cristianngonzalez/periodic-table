@@ -15,13 +15,6 @@ class FilterComponent extends React.Component{
         this.props.titlefilter(title);
     }
 
-    switchFilterInRender(title){
-        switch (title) {
-            case 'metals': return '<div>XXXMETALS<div>';
-            break;
-            case 'no-metals': return '<div>XXXNO-METALS<div>';
-        }
-    }
 
     //This form changes the propertie titlefilter of the store
     render(){
@@ -41,7 +34,79 @@ class FilterComponent extends React.Component{
                 </div>
 
                 <div>
-                    {this.switchFilterInRender(this.props.filter.title)}
+                    {this.props.filter.title == 'metals'? 
+                        <>
+                            <button>Alkaline metals</button>
+                            <button>Alkaline earth metals</button> 
+                            <button>Transition metals</button> 
+                            <button>Post-Transitional metals</button> 
+                            <button>Metalloids</button>
+                            <button>Lanthanides</button>
+                            <button>Actinides</button>
+                        </>
+                        : 
+                        <></>
+                    } 
+
+                    {this.props.filter.title == 'no-metals'? 
+                        <>
+                            <button>No metals</button>
+                            <button>Halogens</button>
+                            <button>Noble gases</button>
+                        </>
+                        : 
+                        <></>
+                    } 
+
+                    {this.props.filter.title == 'states'? 
+                        <>
+                            <button>Gases</button>
+                            <button>Liquids</button>
+                            <button>Solid</button>
+                            <button>Unknows</button>
+                        </>
+                        : 
+                        <></>
+                    } 
+
+                    {this.props.filter.title == 'groups'? 
+                        <>
+                            <button>1</button>
+                            <button>2</button>
+                            <button>3</button>
+                            <button>4</button>
+                            <button>5</button>
+                            <button>6</button>
+                            <button>7</button>
+                            <button>8</button>
+                            <button>9</button>
+                            <button>10</button>
+                            <button>11</button>
+                            <button>12</button>
+                            <button>13</button>
+                            <button>14</button>
+                            <button>15</button>
+                            <button>16</button>
+                            <button>17</button>
+                            <button>18</button>
+                        </>
+                        : 
+                        <></>
+                    } 
+
+                    {this.props.filter.title == 'periods'? 
+                        <>
+                            <button>1</button>
+                            <button>2</button>
+                            <button>3</button>
+                            <button>4</button>
+                            <button>5</button>
+                            <button>6</button>
+                            <button>7</button>
+                        </>
+                        : 
+                        <></>
+                    } 
                 </div>
             </div>
         )
