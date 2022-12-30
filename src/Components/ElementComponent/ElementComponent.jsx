@@ -27,7 +27,11 @@ class ElementComponent extends React.Component{
 
     defineStyle(){
         let elementActive = {background: this.state.type.style_background};
-        let elementInactive = {background: 'white', color: 'white'};
+        let elementInactive = {
+            backgroundColor: 'transparent', 
+            backgroundImage: 'linear-gradient(125deg,rgba(255,255,255,.3),rgba(255,255,255,.2) 70%)',
+            color: 'rgba(255,255,255,0.1)'
+        };
         
         switch(this.props.filter.title){
             case 'all':{ return elementActive};break;
@@ -110,7 +114,7 @@ class ElementComponent extends React.Component{
             <div onClick={() => this.select(this.state.element)} className="element" style={this.defineStyle()}>
                 <span className="symbol">{this.state.element.symbol}</span>
                 <div className="atomic-number">
-                    <span>{this.state.element.atomic_number}</span>
+                    <div>{this.state.element.atomic_number}</div>
                 </div>
             </div>
         )
