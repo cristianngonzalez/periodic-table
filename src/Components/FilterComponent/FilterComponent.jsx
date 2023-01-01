@@ -36,84 +36,84 @@ class FilterComponent extends React.Component{
                     <div className="card-header"><Filter></Filter> Filters</div>
                     <div className="card-body">
                         <div>
-                            <button onClick={() => this.titlefilter('all')} className={this.props.filter.title == 'all'? "btn btn-primary" : "btn btn-secondary"}>All</button>
-                            <button onClick={() => this.titlefilter('metals')} className={this.props.filter.title == 'metals'? "btn btn-primary" : "btn btn-secondary"}>Metals</button>
-                            <button onClick={() => this.titlefilter('no-metals')} className={this.props.filter.title == 'no-metals'? "btn btn-primary" : "btn btn-secondary"}>No metals</button>
-                            <button onClick={() => this.titlefilter('states')} className={this.props.filter.title == 'states'? "btn btn-primary" : "btn btn-secondary"}>States</button>
-                            <button onClick={() => this.titlefilter('groups')} className={this.props.filter.title == 'groups'? "btn btn-primary" : "btn btn-secondary"}>Groups</button>
-                            <button onClick={() => this.titlefilter('periods')} className={this.props.filter.title == 'periods'? "btn btn-primary" : "btn btn-secondary"}>Periods</button>
+                            <button onClick={() => this.titlefilter('all')} className={this.props.filter.title === 'all'? "btn btn-primary" : "btn btn-secondary"}>All</button>
+                            <button onClick={() => this.titlefilter('metals')} className={this.props.filter.title === 'metals'? "btn btn-primary" : "btn btn-secondary"}>Metals</button>
+                            <button onClick={() => this.titlefilter('no-metals')} className={this.props.filter.title === 'no-metals'? "btn btn-primary" : "btn btn-secondary"}>No metals</button>
+                            <button onClick={() => this.titlefilter('states')} className={this.props.filter.title === 'states'? "btn btn-primary" : "btn btn-secondary"}>States</button>
+                            <button onClick={() => this.titlefilter('groups')} className={this.props.filter.title === 'groups'? "btn btn-primary" : "btn btn-secondary"}>Groups</button>
+                            <button onClick={() => this.titlefilter('periods')} className={this.props.filter.title === 'periods'? "btn btn-primary" : "btn btn-secondary"}>Periods</button>
                         </div>
 
                         <div>
-                            {this.props.filter.title == 'metals'? 
+                            {this.props.filter.title === 'metals'? 
                                 <>
-                                    <button onClick={() => this.typefilter(1)} className={this.props.filter.type == 1 ? "btn btn-primary" : "btn btn-secondary"}>Alkaline metals</button>
-                                    <button onClick={() => this.typefilter(2)} className={this.props.filter.type == 2 ? "btn btn-primary" : "btn btn-secondary"}>Alkaline earth metals</button> 
-                                    <button onClick={() => this.typefilter(3)} className={this.props.filter.type == 3 ? "btn btn-primary" : "btn btn-secondary"}>Transition metals</button> 
-                                    <button onClick={() => this.typefilter(4)} className={this.props.filter.type == 4 ? "btn btn-primary" : "btn btn-secondary"}>Post-Transitional metals</button> 
-                                    <button onClick={() => this.typefilter(5)} className={this.props.filter.type == 5 ? "btn btn-primary" : "btn btn-secondary"}>Metalloids</button>
-                                    <button onClick={() => this.typefilter(6)} className={this.props.filter.type == 6 ? "btn btn-primary" : "btn btn-secondary"}>Lanthanides</button>
-                                    <button onClick={() => this.typefilter(7)} className={this.props.filter.type == 7 ? "btn btn-primary" : "btn btn-secondary"}>Actinides</button>
+                                    <button onClick={() => this.typefilter(1)} className={this.props.filter.type === 1 ? "btn btn-primary" : "btn btn-secondary"}>Alkaline metals</button>
+                                    <button onClick={() => this.typefilter(2)} className={this.props.filter.type === 2 ? "btn btn-primary" : "btn btn-secondary"}>Alkaline earth metals</button> 
+                                    <button onClick={() => this.typefilter(3)} className={this.props.filter.type === 3 ? "btn btn-primary" : "btn btn-secondary"}>Transition metals</button> 
+                                    <button onClick={() => this.typefilter(4)} className={this.props.filter.type === 4 ? "btn btn-primary" : "btn btn-secondary"}>Post-Transitional metals</button> 
+                                    <button onClick={() => this.typefilter(5)} className={this.props.filter.type === 5 ? "btn btn-primary" : "btn btn-secondary"}>Metalloids</button>
+                                    <button onClick={() => this.typefilter(6)} className={this.props.filter.type === 6 ? "btn btn-primary" : "btn btn-secondary"}>Lanthanides</button>
+                                    <button onClick={() => this.typefilter(7)} className={this.props.filter.type === 7 ? "btn btn-primary" : "btn btn-secondary"}>Actinides</button>
                                 </>
                                 : 
                                 <></>
                             } 
 
-                            {this.props.filter.title == 'no-metals'? 
+                            {this.props.filter.title === 'no-metals'? 
                                 <>
-                                    <button onClick={() => this.typefilter(8)} className={this.props.filter.type == 8 ? "btn btn-primary" : "btn btn-secondary"}>No metals</button>
-                                    <button onClick={() => this.typefilter(9)} className={this.props.filter.type == 9 ? "btn btn-primary" : "btn btn-secondary"}>Halogens</button>
-                                    <button onClick={() => this.typefilter(10)} className={this.props.filter.type == 10 ? "btn btn-primary" : "btn btn-secondary"}>Noble gases</button>
+                                    <button onClick={() => this.typefilter(8)} className={this.props.filter.type === 8 ? "btn btn-primary" : "btn btn-secondary"}>No metals</button>
+                                    <button onClick={() => this.typefilter(9)} className={this.props.filter.type === 9 ? "btn btn-primary" : "btn btn-secondary"}>Halogens</button>
+                                    <button onClick={() => this.typefilter(10)} className={this.props.filter.type === 10 ? "btn btn-primary" : "btn btn-secondary"}>Noble gases</button>
                                 </>
                                 : 
                                 <></>
                             } 
 
-                            {this.props.filter.title == 'states'? 
+                            {this.props.filter.title === 'states'? 
                                 <>
-                                    <button onClick={() => this.statefilter(1)} className={this.props.filter.state == 1 ? "btn btn-primary" : "btn btn-secondary"}>Gases</button>
-                                    <button onClick={() => this.statefilter(2)} className={this.props.filter.state == 2 ? "btn btn-primary" : "btn btn-secondary"}>Liquids</button>
-                                    <button onClick={() => this.statefilter(3)} className={this.props.filter.state == 3 ? "btn btn-primary" : "btn btn-secondary"}>Solid</button>
-                                    <button onClick={() => this.statefilter(4)} className={this.props.filter.state == 4 ? "btn btn-primary" : "btn btn-secondary"}>Unknows</button>
+                                    <button onClick={() => this.statefilter(1)} className={this.props.filter.state === 1 ? "btn btn-primary" : "btn btn-secondary"}>Gases</button>
+                                    <button onClick={() => this.statefilter(2)} className={this.props.filter.state === 2 ? "btn btn-primary" : "btn btn-secondary"}>Liquids</button>
+                                    <button onClick={() => this.statefilter(3)} className={this.props.filter.state === 3 ? "btn btn-primary" : "btn btn-secondary"}>Solid</button>
+                                    <button onClick={() => this.statefilter(4)} className={this.props.filter.state === 4 ? "btn btn-primary" : "btn btn-secondary"}>Unknows</button>
                                 </>
                                 : 
                                 <></>
                             } 
 
-                            {this.props.filter.title == 'groups'? 
+                            {this.props.filter.title === 'groups'? 
                                 <>
-                                    <button onClick={() => this.groupfilter(1)} className={this.props.filter.group == 1 ? "btn btn-primary" : "btn btn-secondary"}>1</button>
-                                    <button onClick={() => this.groupfilter(2)} className={this.props.filter.group == 2 ? "btn btn-primary" : "btn btn-secondary"}>2</button>
-                                    <button onClick={() => this.groupfilter(3)} className={this.props.filter.group == 3 ? "btn btn-primary" : "btn btn-secondary"}>3</button>
-                                    <button onClick={() => this.groupfilter(4)} className={this.props.filter.group == 4 ? "btn btn-primary" : "btn btn-secondary"}>4</button>
-                                    <button onClick={() => this.groupfilter(5)} className={this.props.filter.group == 5 ? "btn btn-primary" : "btn btn-secondary"}>5</button>
-                                    <button onClick={() => this.groupfilter(6)} className={this.props.filter.group == 6 ? "btn btn-primary" : "btn btn-secondary"}>6</button>
-                                    <button onClick={() => this.groupfilter(7)} className={this.props.filter.group == 7 ? "btn btn-primary" : "btn btn-secondary"}>7</button>
-                                    <button onClick={() => this.groupfilter(8)} className={this.props.filter.group == 8 ? "btn btn-primary" : "btn btn-secondary"}>8</button>
-                                    <button onClick={() => this.groupfilter(9)} className={this.props.filter.group == 9 ? "btn btn-primary" : "btn btn-secondary"}>9</button>
-                                    <button onClick={() => this.groupfilter(10)} className={this.props.filter.group == 10 ? "btn btn-primary" : "btn btn-secondary"}>10</button>
-                                    <button onClick={() => this.groupfilter(11)} className={this.props.filter.group == 11 ? "btn btn-primary" : "btn btn-secondary"}>11</button>
-                                    <button onClick={() => this.groupfilter(12)} className={this.props.filter.group == 12 ? "btn btn-primary" : "btn btn-secondary"}>12</button>
-                                    <button onClick={() => this.groupfilter(13)} className={this.props.filter.group == 13 ? "btn btn-primary" : "btn btn-secondary"}>13</button>
-                                    <button onClick={() => this.groupfilter(14)} className={this.props.filter.group == 14 ? "btn btn-primary" : "btn btn-secondary"}>14</button>
-                                    <button onClick={() => this.groupfilter(15)} className={this.props.filter.group == 15 ? "btn btn-primary" : "btn btn-secondary"}>15</button>
-                                    <button onClick={() => this.groupfilter(16)} className={this.props.filter.group == 16 ? "btn btn-primary" : "btn btn-secondary"}>16</button>
-                                    <button onClick={() => this.groupfilter(17)} className={this.props.filter.group == 17 ? "btn btn-primary" : "btn btn-secondary"}>17</button>
-                                    <button onClick={() => this.groupfilter(18)} className={this.props.filter.group == 18 ? "btn btn-primary" : "btn btn-secondary"}>18</button>
+                                    <button onClick={() => this.groupfilter(1)} className={this.props.filter.group === 1 ? "btn btn-primary" : "btn btn-secondary"}>1</button>
+                                    <button onClick={() => this.groupfilter(2)} className={this.props.filter.group === 2 ? "btn btn-primary" : "btn btn-secondary"}>2</button>
+                                    <button onClick={() => this.groupfilter(3)} className={this.props.filter.group === 3 ? "btn btn-primary" : "btn btn-secondary"}>3</button>
+                                    <button onClick={() => this.groupfilter(4)} className={this.props.filter.group === 4 ? "btn btn-primary" : "btn btn-secondary"}>4</button>
+                                    <button onClick={() => this.groupfilter(5)} className={this.props.filter.group === 5 ? "btn btn-primary" : "btn btn-secondary"}>5</button>
+                                    <button onClick={() => this.groupfilter(6)} className={this.props.filter.group === 6 ? "btn btn-primary" : "btn btn-secondary"}>6</button>
+                                    <button onClick={() => this.groupfilter(7)} className={this.props.filter.group === 7 ? "btn btn-primary" : "btn btn-secondary"}>7</button>
+                                    <button onClick={() => this.groupfilter(8)} className={this.props.filter.group === 8 ? "btn btn-primary" : "btn btn-secondary"}>8</button>
+                                    <button onClick={() => this.groupfilter(9)} className={this.props.filter.group === 9 ? "btn btn-primary" : "btn btn-secondary"}>9</button>
+                                    <button onClick={() => this.groupfilter(10)} className={this.props.filter.group === 10 ? "btn btn-primary" : "btn btn-secondary"}>10</button>
+                                    <button onClick={() => this.groupfilter(11)} className={this.props.filter.group === 11 ? "btn btn-primary" : "btn btn-secondary"}>11</button>
+                                    <button onClick={() => this.groupfilter(12)} className={this.props.filter.group === 12 ? "btn btn-primary" : "btn btn-secondary"}>12</button>
+                                    <button onClick={() => this.groupfilter(13)} className={this.props.filter.group === 13 ? "btn btn-primary" : "btn btn-secondary"}>13</button>
+                                    <button onClick={() => this.groupfilter(14)} className={this.props.filter.group === 14 ? "btn btn-primary" : "btn btn-secondary"}>14</button>
+                                    <button onClick={() => this.groupfilter(15)} className={this.props.filter.group === 15 ? "btn btn-primary" : "btn btn-secondary"}>15</button>
+                                    <button onClick={() => this.groupfilter(16)} className={this.props.filter.group === 16 ? "btn btn-primary" : "btn btn-secondary"}>16</button>
+                                    <button onClick={() => this.groupfilter(17)} className={this.props.filter.group === 17 ? "btn btn-primary" : "btn btn-secondary"}>17</button>
+                                    <button onClick={() => this.groupfilter(18)} className={this.props.filter.group === 18 ? "btn btn-primary" : "btn btn-secondary"}>18</button>
                                 </>
                                 : 
                                 <></>
                             } 
 
-                            {this.props.filter.title == 'periods'? 
+                            {this.props.filter.title === 'periods'? 
                                 <>
-                                    <button onClick={() => this.periodfilter(1)} className={this.props.filter.period == 1 ? "btn btn-primary" : "btn btn-secondary"}>1</button>
-                                    <button onClick={() => this.periodfilter(2)} className={this.props.filter.period == 2 ? "btn btn-primary" : "btn btn-secondary"}>2</button>
-                                    <button onClick={() => this.periodfilter(3)} className={this.props.filter.period == 3 ? "btn btn-primary" : "btn btn-secondary"}>3</button>
-                                    <button onClick={() => this.periodfilter(4)} className={this.props.filter.period == 4 ? "btn btn-primary" : "btn btn-secondary"}>4</button>
-                                    <button onClick={() => this.periodfilter(5)} className={this.props.filter.period == 5 ? "btn btn-primary" : "btn btn-secondary"}>5</button>
-                                    <button onClick={() => this.periodfilter(6)} className={this.props.filter.period == 6 ? "btn btn-primary" : "btn btn-secondary"}>6</button>
-                                    <button onClick={() => this.periodfilter(7)} className={this.props.filter.period == 7 ? "btn btn-primary" : "btn btn-secondary"}>7</button>
+                                    <button onClick={() => this.periodfilter(1)} className={this.props.filter.period === 1 ? "btn btn-primary" : "btn btn-secondary"}>1</button>
+                                    <button onClick={() => this.periodfilter(2)} className={this.props.filter.period === 2 ? "btn btn-primary" : "btn btn-secondary"}>2</button>
+                                    <button onClick={() => this.periodfilter(3)} className={this.props.filter.period === 3 ? "btn btn-primary" : "btn btn-secondary"}>3</button>
+                                    <button onClick={() => this.periodfilter(4)} className={this.props.filter.period === 4 ? "btn btn-primary" : "btn btn-secondary"}>4</button>
+                                    <button onClick={() => this.periodfilter(5)} className={this.props.filter.period === 5 ? "btn btn-primary" : "btn btn-secondary"}>5</button>
+                                    <button onClick={() => this.periodfilter(6)} className={this.props.filter.period === 6 ? "btn btn-primary" : "btn btn-secondary"}>6</button>
+                                    <button onClick={() => this.periodfilter(7)} className={this.props.filter.period === 7 ? "btn btn-primary" : "btn btn-secondary"}>7</button>
                                 </>
                                 : 
                                 <></>
