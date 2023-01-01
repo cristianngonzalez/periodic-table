@@ -26,6 +26,9 @@ class FilterComponent extends React.Component{
     periodfilter(period){
         this.props.periodfilter(period);
     }
+    temperatureFilter(event){
+        console.log(event.target.value);
+    }
 
     //This form changes the propertie titlefilter of the store
     render(){
@@ -42,6 +45,7 @@ class FilterComponent extends React.Component{
                             <button onClick={() => this.titlefilter('states')} className={this.props.filter.title === 'states'? "btn btn-primary" : "btn btn-secondary"}>States</button>
                             <button onClick={() => this.titlefilter('groups')} className={this.props.filter.title === 'groups'? "btn btn-primary" : "btn btn-secondary"}>Groups</button>
                             <button onClick={() => this.titlefilter('periods')} className={this.props.filter.title === 'periods'? "btn btn-primary" : "btn btn-secondary"}>Periods</button>
+                            <button onClick={() => this.titlefilter('temperature')} className={this.props.filter.title === 'temperature'? "btn btn-primary" : "btn btn-secondary"}>Temperature</button>
                         </div>
 
                         <div>
@@ -118,7 +122,33 @@ class FilterComponent extends React.Component{
                                 : 
                                 <></>
                             } 
+                            {this.props.filter.title === 'temperature'? 
+                                <>
+                                    <label className="form-label">Temperature</label>
+                                    <div className="row">
+                                        <div className="col-auto col-temperature-first">
+                                            <div className="row">
+                                                <div className="col-auto">0</div>
+                                                <div className="col-auto"><input onChange={this.temperatureFilter} type="range" min="0" max="6000" className="form-range" id="temperatureInputRange"/></div>
+                                                <div className="col-auto">6000</div>
+                                            </div>
+                                        </div>
+                                        <div className="col-auto">
+                                            <h3>60°</h3>
+                                            <h6>Kelvin</h6>
+                                        </div>
+                                        <div className="col-auto">
+                                            <h3>60°</h3>
+                                            <h6>Celcius</h6>
+                                        </div>
+                                    </div>
+                                </>
+                                : 
+                                <></>
+                            } 
                         </div>
+                        
+
                     </div>
                 </div>
 
