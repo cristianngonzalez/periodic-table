@@ -2,6 +2,8 @@
 import { Steam } from "react-bootstrap-icons";
 import { element , titlefilter } from "../actions/index";
 
+import data from '../data.json';
+
 //InitialState contiene las mismas propiedades que el store
 const initialState = {
   current_element: false,
@@ -11,7 +13,8 @@ const initialState = {
       group: false,
       period: false,
       state: false, 
-  }
+  },
+  types: data[0].types
 };
 
 function rootReducer(state = initialState, action) {

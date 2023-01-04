@@ -2,8 +2,6 @@ import React from "react";
 import './ElementComponent.css';
 import { connect } from 'react-redux';
 
-import data from '../../data.json';
-
 import { select  } from '../../actions/index';
 
 class ElementComponent extends React.Component{
@@ -12,9 +10,9 @@ class ElementComponent extends React.Component{
         super(props);
 
         //Search in types matching type_id with type
-        for(let i = 0; i < data[0].types.length; i++){
-            if(data[0].types[i].id == this.props.element.type_id){
-                this.state = {element: this.props.element , type: data[0].types[i]};
+        for(let i = 0; i < this.props.types.length; i++){
+            if(this.props.types[i].id == this.props.element.type_id){
+                this.state = {element: this.props.element , type: this.props.types[i]};
             }
         }
 
@@ -126,7 +124,8 @@ class ElementComponent extends React.Component{
 
 function mapStateToProps(state) {
     return {
-        filter: state.filter
+        filter: state.filter,
+        types: state.types
     };
   }
 
