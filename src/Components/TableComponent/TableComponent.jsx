@@ -16,7 +16,7 @@ class TableComponent extends React.Component{
     
     render(){
         return(
-            <div>
+            <div className="tableContainer">
 
                 <div className="table">
                     <DetailElementComponent></DetailElementComponent>

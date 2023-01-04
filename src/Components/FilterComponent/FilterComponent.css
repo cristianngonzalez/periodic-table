@@ -18,3 +18,9 @@
 .col-temperature-first{
     width: 250px;
 }
+
+@media(max-width: 1006px){
+    .filter-card{
+        max-width: 100%;
+    }
+}
