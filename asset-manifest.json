@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/periodic-table/static/css/main.c73a1cd6.css",
+    "main.css": "/periodic-table/static/css/main.42b1c451.css",
     "main.js": "/periodic-table/static/js/main.25265449.js",
     "static/js/787.357bed1e.chunk.js": "/periodic-table/static/js/787.357bed1e.chunk.js",
     "static/media/Ubuntu-Regular.ttf": "/periodic-table/static/media/Ubuntu-Regular.1cbb1b79a23478cc89ad.ttf",
     "static/media/Ubuntu-Bold.ttf": "/periodic-table/static/media/Ubuntu-Bold.fec2d0f1431a6114a6ce.ttf",
     "static/media/logo.svg": "/periodic-table/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/periodic-table/index.html",
-    "main.c73a1cd6.css.map": "/periodic-table/static/css/main.c73a1cd6.css.map",
+    "main.42b1c451.css.map": "/periodic-table/static/css/main.42b1c451.css.map",
     "main.25265449.js.map": "/periodic-table/static/js/main.25265449.js.map",
     "787.357bed1e.chunk.js.map": "/periodic-table/static/js/787.357bed1e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c73a1cd6.css",
+    "static/css/main.42b1c451.css",
     "static/js/main.25265449.js"
   ]
 }
