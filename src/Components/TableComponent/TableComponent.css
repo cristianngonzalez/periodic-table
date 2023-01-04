@@ -13,6 +13,7 @@
 @media(max-width: 1008px){
     .tableContainer{
         max-width: 100% !important;
+        height: 545px;
         white-space: nowrap;
         overflow: auto;
     }
