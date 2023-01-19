@@ -45,7 +45,7 @@ class FilterComponent extends React.Component{
                             <button onClick={() => this.titlefilter('states')} className={this.props.filter.title === 'states'? "btn btn-primary" : "btn btn-secondary"}>States</button>
                             <button onClick={() => this.titlefilter('groups')} className={this.props.filter.title === 'groups'? "btn btn-primary" : "btn btn-secondary"}>Groups</button>
                             <button onClick={() => this.titlefilter('periods')} className={this.props.filter.title === 'periods'? "btn btn-primary" : "btn btn-secondary"}>Periods</button>
-                            <button onClick={() => this.titlefilter('temperature')} className={this.props.filter.title === 'temperature'? "btn btn-primary" : "btn btn-secondary"}>Temperature</button>
+                            {/* <button onClick={() => this.titlefilter('temperature')} className={this.props.filter.title === 'temperature'? "btn btn-primary" : "btn btn-secondary"}>Temperature</button> */}
                         </div>
 
                         <div>
